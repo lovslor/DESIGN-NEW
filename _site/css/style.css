@@ -2,10 +2,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* border: 1px dotted lightgrey; */
+  border: 1px dotted lightgrey;
 }
 
-html {scroll-behavior: smooth;}
+/* html {scroll-behavior: smooth;} */
 
 body {
   margin: 0 auto;
@@ -13,7 +13,7 @@ body {
               'Tangerine', cursive,
               'Cormorant SC', serif;
   color: #080202;
-  opacity: 0.6;
+  /* opacity: 0.6; */
   background-color: #F7F7F7;
   line-height: 1.5;
   /* padding: 0em 1em; */
@@ -30,22 +30,28 @@ body {
 
 .sc-font {font-family: 'Cormorant SC', serif;}
 
-.narrow {
-  max-width: 75ch;
+/* .narrow {
+  max-width: 114ch;
   margin: auto;
-}
+} */
 
-.padded {
-  padding: 21%;
-}
+.padded {padding: 21%;}
+.padded-1 {padding: 6rem;}
 
 /* ------ General Typography ------ */
-h1 {
+h1, p {
   font-size: 2rem;
   font-weight: 300;
 }
 
-h2 {
+h1 span {
+  font-size: 3.5rem;
+}
+
+h2 {}
+
+p span {
+  font-family: 'Tangerine', cursive;
 }
 
 /* ------ Button Styles ------ */
@@ -85,6 +91,26 @@ nav a span:hover {
   text-decoration: underline;
 }
 
+footer {
+  background-image: url('/img/henry-co-unsplash.jpg');
+  background-position: center;
+  background-size: cover;
+  min-height: 32vh;
+}
+
+.footer {
+  padding-top: 16rem;
+}
+
+.footer h2 {font-size: 0.5rem;}
+.footer p {font-size: 0.4rem;}
+
+.txt {
+  text-align: justify;
+  text-justify: inter-word;
+  letter-spacing: 0.2px;
+}
+
 #logo {
   background-image: url('/img/logo-small.png');
   background-position: center;
@@ -96,6 +122,25 @@ nav a span:hover {
   width: 40vw;
 }
 
+#number {
+	font-size: 8rem;
+  font-weight: 300;
+	display: inline-block;
+}
+
+
+#number span {
+	font-size: 1.5rem;
+	display: inline-flex;
+	transform: rotate(-90deg) translate(12px,6px);
+}
+
+/* #footer {
+  font-size: small;
+  font-weight: 300;
+  padding-top: 6rem;
+} */
+
 /* ------ Banners ------ */
 .banner {
   display: inline-block;
@@ -105,6 +150,9 @@ nav a span:hover {
   background-attachment: fixed;
   min-height: 65vh;
   width: 100%;
+  opacity: 0.9;
+  filter:brightness(80%);
+  position: relative;
 }
 
 #size-indicator::after {
