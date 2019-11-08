@@ -1,0 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 1px dotted lightgrey; */
+}
+
+html {scroll-behavior: smooth;}
+
+body {
+  margin: 0 auto;
+  font-family:'Cormorant Garamond',serif,
+              'Tangerine', cursive,
+              'Cormorant SC', serif;
+  color: #080202;
+  opacity: 0.6;
+  background-color: #F7F7F7;
+  line-height: 1.5;
+  /* padding: 0em 1em; */
+}
+
+
+/* ------ Utility Classes ------ */
+.left {text-align: left;}
+.center {text-align: center;}
+.right {text-align: right;}
+
+.light-text {color: #FFFFFF;}
+.color-text {color: #AA9082;}
+
+.sc-font {font-family: 'Cormorant SC', serif;}
+
+.narrow {
+  max-width: 75ch;
+  margin: auto;
+}
+
+.padded {
+  padding: 21%;
+}
+
+/* ------ General Typography ------ */
+h1 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+h2 {
+}
+
+/* ------ Button Styles ------ */
+.button {
+  display:inline-block;
+  text-decoration: none;
+  border: 1px solid white;
+  background-color: rgba(255,255,255, 0.2);  color: white;
+  padding: 3px 35px;
+  line-height: 2;
+  font-size: 1.2rem;
+}
+.button:hover {}
+
+/* ------ Headers & Footers ------ */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 4rem;
+}
+
+nav a {
+  color: #3E3C3D;
+  text-decoration: none;
+  /* display: inline; */
+}
+
+/* Text links in the <nav> get some extra padding
+  to push them down, we leave the image element untouched. */
+nav a span {
+  display: inline-block;
+  padding-top: 6rem;
+}
+
+nav a span:hover {
+  text-decoration: underline;
+}
+
+#logo {
+  background-image: url('/img/logo-small.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  min-height: 18vh;
+  max-width: 400px;
+  width: 40vw;
+}
+
+/* ------ Banners ------ */
+.banner {
+  display: inline-block;
+  background-image: url('/img/september.jpg');
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 65vh;
+  width: 100%;
+}
+
+#size-indicator::after {
+  content: 'This is extra-small';
+}
+
+/* ------ Media queries ------ */
+
+/* Everything above this should work at xs (extra small) and larger sizes */
+
+/* CSS rules that apply to small or greater go in here. */
+@media (min-width: 36em) {
+  #size-indicator::after {
+    content: 'This is small';
+  }
+
+  #logo {
+    width: 50vw;
+  }
+
+  .service {
+    max-width: 36em;
+  }
+}
+
+/* CSS rules that apply to medium or greater go in here. */
+@media (min-width: 48em) {
+  #size-indicator::after {
+    content: 'This is medium';
+  }
+
+  body {
+    padding: 4em 1em;
+  }
+
+  nav {
+    font-size: 1.2.rem;
+  }
+}
+
+/* CSS rules that apply to large or greater go in here. */
+@media (min-width: 64em) {
+  #size-indicator::after {
+    content: 'This is large';
+  }
+
+  nav {
+    font-size: 1.4rem;
+  }
+}
+
+/* CSS rules that apply to extra large or greater go here. */
+@media (min-width: 80em) {
+  #size-indicator::after {
+    content: 'This is extra large';
+  }
+
+  body {
+    max-width: 80em;
+  }
+}
