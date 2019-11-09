@@ -1,9 +1,37 @@
 ---
 layout: default
+title: hello
+projects:
+  - name: Project 1
+    description: here comes a long line of text
+    image: /img/oladimeji-odunsi-aU_eOcelLhQ-unsplash.jpg
+    website: www.google.com
+  - name: Project 2
+    description: here comes a long line of text
+    image: /img/oladimeji-odunsi-aU_eOcelLhQ-unsplash.jpg
+    website: www.google.com
+  - name: Project 3
+    description: here comes a long line of text
+    image: /img/oladimeji-odunsi-aU_eOcelLhQ-unsplash.jpg
+    website: www.google.com
+  - name: Project 4
+    description: here comes a long line of text
+    image: /img/oladimeji-odunsi-aU_eOcelLhQ-unsplash.jpg
+    website: www.google.com
 ---
 
-<section class="shop center">
-  <div id="shop">
-    <p>coming soon</p>
+<h1>{{page.title}}</h1>
+
+<section class='grid'>
+  {% for project in page.projects %}
+  <div class="col-4">
+    <div class="portfolio-listing center">
+      <h3>{{ project.name }}</h3>
+      <div class="bg" style="background-image: url({{project.image}})"></div>
+      <!-- <img src="/img/september.jpg" alt=""> -->
+      <p>{{project.description}}</p>
+      <a class='btn' href="{{project.website}}">visit</a>
+    </div>
   </div>
+  {% endfor %}
 </section>

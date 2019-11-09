@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  border: 1px dotted lightgrey;
+  /* border: 1px dotted lightgrey; */
 }
 
 /* html {scroll-behavior: smooth;} */
@@ -16,6 +16,7 @@ body {
   /* opacity: 0.6; */
   background-color: #F7F7F7;
   line-height: 1.5;
+  letter-spacing: 1px;
   /* padding: 0em 1em; */
 }
 
@@ -38,8 +39,29 @@ body {
 .padded {padding: 21%;}
 .padded-1 {padding: 6rem;}
 
+
+.bg {
+  background-image: url('/img/mia-moessinger-IwPkCvsgQ9w-unsplash.jpg');
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 100%;
+}
+
+.btn {
+  display:inline-block;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  border: 1px solid #AA9082;
+}
+
+.btn:hover {
+  color: #F7F7F7;
+  background-color: #AA9082;
+  text-decoration: none;
+}
+
 /* ------ General Typography ------ */
-h1, p {
+h1 {
   font-size: 2rem;
   font-weight: 300;
 }
@@ -52,6 +74,24 @@ h2 {}
 
 p span {
   font-family: 'Tangerine', cursive;
+}
+
+p{
+  font-size: 1.2rem;
+}
+
+a {
+  color: #AA9082;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ------ Containers ------ */
+section {
+  padding: 5% 10%;
 }
 
 /* ------ Button Styles ------ */
@@ -187,6 +227,17 @@ opacity: 0.9;
   margin: 15rem;
 }
 
+/* ------ Portfolio ------ */
+.portfolio-listing {
+  margin-bottom: 2rem;
+}
+
+.portfolio-listing p {
+  margin: 1rem auto;
+}
+
+
+
 #size-indicator::after {
   content: 'This is extra-small';
 }
@@ -216,9 +267,6 @@ opacity: 0.9;
     content: 'This is medium';
   }
 
-  body {
-    padding: 4em 1em;
-  }
 
   nav {
     font-size: 1.2.rem;
@@ -242,7 +290,7 @@ opacity: 0.9;
     content: 'This is extra large';
   }
 
-  body {
+  /* body {
     max-width: 80em;
-  }
+  } */
 }
