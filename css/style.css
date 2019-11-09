@@ -157,6 +157,18 @@ footer {
   position: relative;
 }
 
+/* ------ About ------ */
+h3 {
+  color: #AA9082;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+img {
+margin-left: 25%;
+opacity: 0.9;
+}
+
 /* ------ Work & Shop ------ */
 .shop {
   padding: 6% 7%;
