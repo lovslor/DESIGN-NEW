@@ -17,7 +17,12 @@ body {
   background-color: #F7F7F7;
   line-height: 1.5;
   letter-spacing: 1px;
-  /* padding: 0em 1em; */
+  padding: 0em 0em;
+}
+
+header {
+  padding-top: 4.5rem;
+  margin-bottom: 4rem;
 }
 
 
@@ -62,7 +67,7 @@ body {
 
 /* ------ General Typography ------ */
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 300;
 }
 
@@ -71,6 +76,8 @@ h1 span {
 }
 
 h2 {}
+
+h3 {font-size: 1rem;}
 
 p span {
   font-family: 'Tangerine', cursive;
@@ -89,10 +96,14 @@ a:hover {
   text-decoration: underline;
 }
 
+blockquote p {
+  font-size: 2rem;
+}
 /* ------ Containers ------ */
 section {
   padding: 5% 10%;
 }
+/* simba put this in here  */
 
 /* ------ Button Styles ------ */
 .button {
@@ -103,6 +114,7 @@ section {
   padding: 3px 35px;
   line-height: 2;
   font-size: 1.2rem;
+  margin: 1.5rem;
 }
 .button:hover {}
 
@@ -111,7 +123,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin-bottom: 4rem;
+  /* margin-bottom: 4rem; */
 }
 
 nav a {
@@ -138,6 +150,7 @@ footer {
   background-size: cover;
   min-height: 32vh;
   filter:blur(0.2px) brightness(95%) opacity(0.6);
+  width: auto;
 }
 
 .footer {
@@ -190,7 +203,7 @@ footer {
   background-position: center top;
   background-size: cover;
   background-attachment: fixed;
-  min-height: 65vh;
+  max-height: 50vh;
   width: 100%;
   opacity: 0.9;
   filter:brightness(80%);
@@ -205,15 +218,23 @@ h3 {
 }
 
 img {
-margin-left: 25%;
+/* margin-left: 10%; */
 opacity: 0.9;
+}
+
+.lightgrey {
+  /* background-color: rgba(255,255,255,0.2); */
+  background-color: black;
+  display: flex;
+  position: absolute;
+  margin-left: 44%;
+  width: 40em;
+  height: 31em;
+  top: 36rem;
 }
 
 /* ------ Work & Shop ------ */
 .shop {
-  padding: 6% 7%;
-}
-#shop {
   display: inline-block;
   color: #3E3C3D;
   border: 1px solid #3E3C3D;
@@ -224,7 +245,7 @@ opacity: 0.9;
   max-width: 285px;
   letter-spacing: 1px;
   opacity: 0.6;
-  margin: 15rem;
+  margin: 5rem;
 }
 
 /* ------ Portfolio ------ */
@@ -236,13 +257,82 @@ opacity: 0.9;
   margin: 1rem auto;
 }
 
+/* ------ Contact Form ------ */
+.contact-form {
+  /* text-align: center; */
+  height: 108vh;
+  font-size: small;
+}
 
+.contact-form a, {
+  color: #080202;
+  display: inline-block;
+  padding: 1rem 2rem;
+  border: 0.5px solid #080202;
+  opacity: 0.5;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.form-md {
+  width: 50%;
+  padding: 5%;
+  margin: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 1px solid #080202;
+  background-color: transparent;
+}
+
+input:focus, textarea:focus {
+  border: 0.5px solid #AA9082;
+  outline: none;
+}
+
+textarea {
+  min-height: 6rem;
+  min-width: 25rem;
+  border: none;
+}
+
+/* textarea:focu */
+
+select {
+  display: inline-block;
+}
+
+.btn-flat.fancy {
+  display:inline-block;
+  color: #AA9082;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  border: 1px solid #AA9082;
+  letter-spacing: 4px;
+  font-size: 0.8rem;
+  width: auto;
+}
+/* Hover Effects */
+.btn-flat:hover {
+  color: #F7F7F7;
+  background-color: #AA9082;
+  text-decoration: none;
+}
+
+
+/* ------ Media queries ------ */
 
 #size-indicator::after {
   content: 'This is extra-small';
 }
-
-/* ------ Media queries ------ */
 
 /* Everything above this should work at xs (extra small) and larger sizes */
 

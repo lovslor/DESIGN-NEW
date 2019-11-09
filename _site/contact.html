@@ -26,27 +26,53 @@
       </nav>
     </header>
 
-    <section class='center'>
-  <h1> let's work together !</h1>
-  <!-- <h2>I look forward from hearing from you.</h2> -->
-  <div class="">
-    <a href="#">contact@lordesign.co</a>
-    <h3>Monday - Friday</h3>
-    <h3>9am to 4pm</h3>
-    <p>Cest</p>
-  </div>
-</section>
+    <section class="center contact-form">
+  <h1> let's work together ! </h1>
+  <a href="mailto:contact@lordesign.co">contact@lordesign.co</a>
+  <h3>Monday - Friday</h3>
+  <h3>9am to 4pm</h3>
+  <!-- <div class="padding-right "> -->
+    <form class="grid left form-md grid-spaceAround" action="https://formspree.io/lovslor@hotmail.com" method="POST">
+      <div class="form-group col-12">
+        <label for="your name">Your Name*</label>
+        <input id="your name" name="your name" class="form-control" type="text"  placeholder="" required>
+      </div>
 
+      <div class="form-group col-12">
+        <label for="your brand">Your Brand</label>
+        <input id="your brand" class="form-control" type="text"  name="your brand" placeholder="" required>
+      </div>
 
-<section class='center'>
-  <form method="POST" action="https://formspree.io/contact@lordesign.co">
-  <div class="hpot">
-    <label>Leave this field empty: <input name="_gotcha"></label>
-  </div>
-  <label>Comments:
-    <textarea name="comments"></textarea>
-  </label>
-</form>
+      <div class="form-group col-12">
+        <label for="website">Website-URL</label>
+        <input id="website" name="website" class="form-control" type="text"  placeholder="" required>
+      </div>
+
+      <div class="form-group col-6">
+        <label for="email">E-Mail*</label>
+        <input id="email" name="email" class="form-control" type="text"  placeholder="" required>
+      </div>
+
+      <div class="form-group col-6">
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" class="form-control" type="text"  placeholder="" required>
+      </div>
+
+      <label for="message"> How May I help you with your Project? [or please select down below] </label>
+      <textarea name="message" id="message" placeholder=""></textarea>
+
+      <div class="form-group col-12">
+        <label for="level">Desired Service</label>
+        <select name="level">
+        <option value="webdesign">Web Design</option>
+        <option value="webdev">Web Development</option>
+        <option value="content">Content Photography</option>
+        </select>
+      </div>
+
+      <input type="submit" class="btn-flat fancy" value="Send">
+    </form>
+  <!-- </div> -->
 </section>
 
 
