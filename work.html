@@ -1,56 +1,19 @@
 ---
 layout: default
 title: My Work
-projects:
-  - name: Project 1
-    description: here comes a long line of text
-    image: /img/oladimeji-odunsi-aU_eOcelLhQ-unsplash.jpg
-    website: www.google.com
-  - name: Project 2
-    description: here comes a long line of text
-    image: /img/oladimeji-odunsi-aU_eOcelLhQ-unsplash.jpg
-    website: www.google.com
-  - name: Project 3
-    description: here comes a long line of text
-    image: /img/oladimeji-odunsi-aU_eOcelLhQ-unsplash.jpg
-    website: www.google.com
-  - name: Project 4
-    description: here comes a long line of text
-    image: /img/oladimeji-odunsi-aU_eOcelLhQ-unsplash.jpg
-    website: www.google.com
-  - name: Project 5
-    description: here comes a long line of text
-    image: /img/oladimeji-odunsi-aU_eOcelLhQ-unsplash.jpg
-    website: www.google.com
-  - name: Project 6
-    description: here comes a long line of text
-    image: /img/oladimeji-odunsi-aU_eOcelLhQ-unsplash.jpg
-    website: www.google.com
-  - name: Project 7
-    description: here comes a long line of text
-    image: /img/oladimeji-odunsi-aU_eOcelLhQ-unsplash.jpg
-    website: www.google.com
-  - name: Project 8
-    description: here comes a long line of text
-    image: /img/oladimeji-odunsi-aU_eOcelLhQ-unsplash.jpg
-    website: www.google.com
-  - name: Project 9
-    description: here comes a long line of text
-    image: /img/oladimeji-odunsi-aU_eOcelLhQ-unsplash.jpg
-    website: www.google.com
 ---
 
 <h1 class='center'>{{page.title}}</h1>
 
 <section class='grid'>
-  {% for project in page.projects %}
+  {% for project in site.projects %}
   <div class="col-4">
     <div class="portfolio-listing center">
       <h3>{{ project.name }}</h3>
       <div class="bg" style="background-image: url({{project.image}})"></div>
       <!-- <img src="/img/september.jpg" alt=""> -->
       <p>{{project.description}}</p>
-      <a class='btn' href="{{project.website}}">visit</a>
+      <a class='btn' href="{{project.url}}">visit</a>
     </div>
   </div>
   {% endfor %}

@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div class="grid">
+  <section class="col-4_sm-12">
+    <img src="{{page.logo}}" class='client-logo' alt="">
+    <h1> {{page.name}}</h1>
+      {{ content }}
+      <a href="{{page.website}}" class='btn'>visit site</a>
+  </section>
+  <section class="grid col-8_sm-12">
+    {% for photo in page.photos %}
+    <div class="{{photo.class}}">
+      <div class='portfolio-photo' style="background-image:url({{photo.url}})">
+      </div>
+    </div>
+    {%endfor%}
+  </section>
+</div>

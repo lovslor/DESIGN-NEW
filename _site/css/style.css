@@ -166,6 +166,10 @@ footer {
   letter-spacing: 0.2px;
 }
 
+.client-logo {
+  max-width: 8rem;
+}
+
 #logo {
   background-image: url('/img/logo-small.png');
   background-position: center;
@@ -220,6 +224,7 @@ h3 {
 img {
 /* margin-left: 10%; */
 opacity: 0.9;
+max-width: 100%;
 }
 
 .lightgrey {
@@ -255,6 +260,12 @@ opacity: 0.9;
 
 .portfolio-listing p {
   margin: 1rem auto;
+}
+
+.portfolio-photo {
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
 }
 
 /* ------ Contact Form ------ */
