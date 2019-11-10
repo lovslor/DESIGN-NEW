@@ -284,14 +284,14 @@ max-width: 100%;
   filter: brightness(90%);
 }
 
-.vl {
-  border-left: 1.5px solid black;
+/* .vl {
+  border-left: 1px solid black;
   height: 250px;
   position: absolute;
   left: 65%;
   margin-left: 200px;
   top: 140%;
-}
+} */
 
 /* ------ Work & Shop ------ */
 .shop {
