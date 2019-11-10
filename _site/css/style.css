@@ -25,6 +25,10 @@ header {
   margin-bottom: 4rem;
 }
 
+[class*='grid'] {
+  margin:0;
+}
+
 
 /* ------ Utility Classes ------ */
 .left {text-align: left;}
@@ -41,8 +45,8 @@ header {
   margin: auto;
 } */
 
-.padded {padding: 21%;}
-.padded-1 {padding: 6rem;}
+.padded {padding: 1%;}
+.padded-1 {padding: 3rem;}
 
 
 .bg {
@@ -85,6 +89,7 @@ p span {
 
 p{
   font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 a {
@@ -155,10 +160,11 @@ footer {
 
 .footer {
   padding-top: 16rem;
+  padding-bottom: 1rem;
 }
 
-.footer h2 {font-size: 0.5rem;}
-.footer p {font-size: 0.4rem;}
+.footer h2 {font-size: 0.9rem;}
+.footer p {font-size: 0.7rem;}
 
 .txt {
   text-align: justify;
@@ -202,17 +208,27 @@ footer {
 
 /* ------ Banners ------ */
 .banner {
-  display: inline-block;
+  min-height: 50vh;
+  width: 100%;
+  position: relative;
+}
+/* Added */
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background-image: url('/img/september.jpg');
   background-position: center top;
   background-size: cover;
   background-attachment: fixed;
-  max-height: 50vh;
-  width: 100%;
   opacity: 0.9;
-  filter:brightness(80%);
-  position: relative;
+  filter:brightness(70%);
+  z-index: -1;
 }
+
 
 /* ------ About ------ */
 h3 {
@@ -227,15 +243,37 @@ opacity: 0.9;
 max-width: 100%;
 }
 
-.lightgrey {
-  /* background-color: rgba(255,255,255,0.2); */
-  background-color: black;
+.about img {
+  width: 60%;
+}
+
+/* .lightgrey {
+  background-color: rgba(255,255,255,0.2);
+
   display: flex;
   position: absolute;
   margin-left: 44%;
   width: 40em;
   height: 31em;
   top: 36rem;
+} */
+
+.lightgrey p {
+  font-family: 'Cinzel';
+  font-size: 1.6em;
+  text-align: center;
+  display:flex;
+  align-items: center;
+}
+.grey {
+  background-color: #FFFFFF;
+  width: 30em;
+  height: 30em;
+  top: 42rem;
+  margin-left: 18%;
+  position: absolute;
+  opacity: 0.4;
+  filter: brightness(90%);
 }
 
 /* ------ Work & Shop ------ */
@@ -286,7 +324,7 @@ max-width: 100%;
 }
 
 .form-md {
-  width: 50%;
+  width: 500px;
   padding: 5%;
   margin: auto;
   /* margin-left: auto;
@@ -345,6 +383,30 @@ select {
   content: 'This is extra-small';
 }
 
+.mob-show {
+  display: none;
+}
+
+@media(max-width: 700px) {
+  .mob-show {
+    display: block;
+  }
+  .mob-hide {
+    display: none;
+  }
+
+  nav a span {
+    padding-top: 1rem;
+  }
+
+  .form-md {
+    width: 100%;
+    padding: 1%;
+    margin: auto;
+  }
+}
+
+
 /* Everything above this should work at xs (extra small) and larger sizes */
 
 /* CSS rules that apply to small or greater go in here. */
@@ -367,7 +429,6 @@ select {
   #size-indicator::after {
     content: 'This is medium';
   }
-
 
   nav {
     font-size: 1.2.rem;
