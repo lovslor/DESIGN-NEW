@@ -46,7 +46,11 @@ header {
 } */
 
 .padded {padding: 1%;}
-.padded-1 {padding: 3rem;}
+.padded-1 {padding: 1.5rem;}
+
+.margin {
+  margin-bottom: 1rem;
+}
 
 
 .bg {
@@ -225,7 +229,7 @@ footer {
   background-size: cover;
   background-attachment: fixed;
   opacity: 0.9;
-  filter:brightness(70%);
+  filter:brightness(100%);
   z-index: -1;
 }
 
@@ -243,37 +247,50 @@ opacity: 0.9;
 max-width: 100%;
 }
 
+.about {
+  margin-bottom: 20%;
+}
 .about img {
-  width: 60%;
+  width: 50%;
 }
 
-/* .lightgrey {
+.lightgrey {
   background-color: rgba(255,255,255,0.2);
 
   display: flex;
   position: absolute;
   margin-left: 44%;
-  width: 40em;
+  /* width: 40em; */
   height: 31em;
   top: 36rem;
-} */
+}
 
 .lightgrey p {
-  font-family: 'Cinzel';
+  /* color: white; */
   font-size: 1.6em;
   text-align: center;
   display:flex;
   align-items: center;
+  text-transform: uppercase;
 }
 .grey {
   background-color: #FFFFFF;
   width: 30em;
   height: 30em;
   top: 42rem;
-  margin-left: 18%;
+  margin-left: 7%;
   position: absolute;
-  opacity: 0.4;
+  opacity: 0.6;
   filter: brightness(90%);
+}
+
+.vl {
+  border-left: 1.5px solid black;
+  height: 250px;
+  position: absolute;
+  left: 65%;
+  margin-left: 200px;
+  top: 140%;
 }
 
 /* ------ Work & Shop ------ */
@@ -281,14 +298,15 @@ max-width: 100%;
   display: inline-block;
   color: #3E3C3D;
   border: 1px solid #3E3C3D;
-  padding: 0.5% 5%;
+  padding: 1rem 2rem;
   font-weight: 300;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 1rem auto;
   max-width: 285px;
   letter-spacing: 1px;
   opacity: 0.6;
   margin: 5rem;
+  text-decoration: none;
 }
 
 /* ------ Portfolio ------ */
@@ -313,14 +331,22 @@ max-width: 100%;
   font-size: small;
 }
 
-.contact-form a, {
-  color: #080202;
+.contact-form a {
+  color: #3E3C3D;
   display: inline-block;
   padding: 1rem 2rem;
-  border: 0.5px solid #080202;
+  border: 0.5px solid #3E3C3D;
   opacity: 0.5;
   font-size: 1rem;
   text-decoration: none;
+}
+
+.contact-form h1 {
+  /* font-size: 1rem; */
+  margin-bottom: 1.5rem;
+}
+.contact-form h3 {
+  font-size: 1rem;
 }
 
 .form-md {
@@ -404,6 +430,18 @@ select {
     padding: 1%;
     margin: auto;
   }
+
+  .about {
+    margin-bottom: 20%;
+  }
+  .about img {
+    width: 100%;
+  }
+
+  /* .mob-show p {
+    display: show;
+    font-size: 0.5rem;
+  } */
 }
 
 
