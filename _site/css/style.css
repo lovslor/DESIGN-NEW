@@ -2,17 +2,23 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* border: 1px dotted lightgrey; */
+  border: 1px dotted lightgrey;
 }
 
-/* html {scroll-behavior: smooth;} */
+html {scroll-behavior: smooth;}
+/* smooth scrolling between internal links */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 body {
   margin: 0 auto;
   font-family:'Cormorant Garamond',serif,
               'Tangerine', cursive,
               'Cormorant SC', serif;
-  color: #080202;
+  color: #3E3C3D;
   /* opacity: 0.6; */
   background-color: #F7F7F7;
   line-height: 1.5;
@@ -20,20 +26,18 @@ body {
   padding: 0em 0em;
 }
 
-header {
-  padding-top: 4.5rem;
-  margin-bottom: 4rem;
-}
-
-[class*='grid'] {
-  margin:0;
-}
+[class*='grid'] {margin: 0;}
 
 
 /* ------ Utility Classes ------ */
 .left {text-align: left;}
 .center {text-align: center;}
 .right {text-align: right;}
+
+.padded {padding: 1%;}
+.padded-1 {padding: 1.5rem;}
+
+.margin {margin-bottom: 1rem;}
 
 .light-text {color: #FFFFFF;}
 .color-text {color: #AA9082;}
@@ -44,105 +48,55 @@ header {
   max-width: 114ch;
   margin: auto;
 } */
+.bg {}
+.bg-1 {}
+.bg-2 {}
 
-.padded {padding: 1%;}
-.padded-1 {padding: 1.5rem;}
+/* --- General Typography --- */
 
-.margin {
-  margin-bottom: 1rem;
-}
-
-
-.bg {
-  background-image: url('/img/mia-moessinger-IwPkCvsgQ9w-unsplash.jpg');
-  background-position: center;
-  background-size: cover;
-  padding-bottom: 100%;
-}
-
-.btn {
-  display:inline-block;
-  padding: 1rem 2rem;
-  text-transform: uppercase;
-  border: 1px solid #AA9082;
-}
-
-.btn:hover {
-  color: #F7F7F7;
-  background-color: #AA9082;
-  text-decoration: none;
-}
-
-/* ------ General Typography ------ */
 h1 {
   font-size: 2.5rem;
   font-weight: 300;
 }
 
-h1 span {
-  font-size: 3.5rem;
-}
-
+h1 span {font-size: 3.5rem;}
 h2 {}
-
 h3 {font-size: 1rem;}
-
-p span {
-  font-family: 'Tangerine', cursive;
-}
 
 p{
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
+p span {
+  font-family: 'Tangerine', cursive;
+}
+
+hr {}
 
 a {
   color: #AA9082;
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+a:hover {text-decoration: underline;}
+
+/* --- Headers & Footers --- */
+header {
+  padding-top: 4.5rem;
+  margin-bottom: 4rem;
 }
 
-blockquote p {
-  font-size: 2rem;
-}
-/* ------ Containers ------ */
-section {
-  padding: 5% 10%;
-}
-/* simba put this in here  */
-
-/* ------ Button Styles ------ */
-.button {
-  display:inline-block;
-  text-decoration: none;
-  border: 1px solid white;
-  background-color: rgba(255,255,255, 0.2);  color: white;
-  padding: 3px 35px;
-  line-height: 2;
-  font-size: 1.2rem;
-  margin: 1.5rem;
-}
-.button:hover {}
-
-/* ------ Headers & Footers ------ */
 nav {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  /* margin-bottom: 4rem; */
 }
 
 nav a {
   color: #3E3C3D;
   text-decoration: none;
-  /* display: inline; */
 }
 
-/* Text links in the <nav> get some extra padding
-  to push them down, we leave the image element untouched. */
 nav a span {
   display: inline-block;
   padding-top: 6rem;
@@ -151,33 +105,6 @@ nav a span {
 nav a span:hover {
   color: #AA9082;
   text-decoration: none;
-}
-
-footer {
-  background-image: url('/img/henry-co-unsplash.jpg');
-  background-position: 50% 0%;
-  background-size: cover;
-  min-height: 32vh;
-  filter:blur(0.2px) brightness(95%) opacity(0.6);
-  width: auto;
-}
-
-.footer {
-  padding-top: 16rem;
-  padding-bottom: 1rem;
-}
-
-.footer h2 {font-size: 0.9rem;}
-.footer p {font-size: 0.7rem;}
-
-.txt {
-  text-align: justify;
-  text-justify: inter-word;
-  letter-spacing: 0.2px;
-}
-
-.client-logo {
-  max-width: 8rem;
 }
 
 #logo {
@@ -191,26 +118,83 @@ footer {
   width: 40vw;
 }
 
-#number {
-	font-size: 8rem;
-  font-weight: 300;
-	display: inline-block;
+footer {
+  background-color: #B7ADA7;
+  min-height: 15vh;
+  width: auto;
+}
+
+footer h2, p {
+  font-size: 0.9rem;
+  font-weight: lighter;
+}
+
+.footer {
+  padding-top: 8rem;
+  padding-bottom: 1rem;
+}
+
+/* --- Hamburger Bar --- */
+.hamburger {display: none;}
+.hamburger {
+  position: absolute;
+  top:0;
+  right:0;
+  z-index: 3;
+  font-size: 1.5rem;
+  padding:2% 5%;
+}
+
+.active {
+  color: #574b90;
+}
+
+/* --- Button Styles --- */
+.button {
+  display:inline-block;
+  text-decoration: none;
+  border: 1px solid white;
+  background-color: rgba(255,255,255, 0.2);
+  color: white;
+  padding: 0.5rem 1rem;
+  line-height: 2;
+  font-size: 1.2rem;
+  margin: 1.5rem;
+}
+.button:hover {}
+
+.btn {
+    display:inline-block;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    border: 1px solid #AA9082;
+  }
+
+.btn:hover {
+    color: #F7F7F7;
+    background-color: #AA9082;
+    text-decoration: none;
+}
+
+.btn-flat.fancy {
+  display:inline-block;
+  color: #AA9082;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  border: 1px solid #AA9082;
+  letter-spacing: 4px;
+  font-size: 0.8rem;
+  width: auto;
+}
+/* Hover Effects */
+.btn-flat:hover {
+  color: #F7F7F7;
+  background-color: #AA9082;
+  text-decoration: none;
 }
 
 
-#number span {
-	font-size: 1.5rem;
-	display: inline-flex;
-	transform: rotate(-90deg) translate(12px,6px);
-}
-
-/* #footer {
-  font-size: small;
-  font-weight: 300;
-  padding-top: 6rem;
-} */
-
-/* ------ Banners ------ */
+/* --- Banner --- */
 .banner {
   min-height: 50vh;
   width: 100%;
@@ -233,6 +217,40 @@ footer {
   z-index: -1;
 }
 
+.bg {
+  background-image: url('/img/mia-moessinger-IwPkCvsgQ9w-unsplash.jpg');
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 100%;
+}
+
+/* --- Forms --- */
+
+/* ------ Containers ------ */
+section {
+  padding: 5% 10%;
+}
+/* simba put this in here  */
+
+
+.client-logo {
+  max-width: 8rem;
+}
+
+
+#number {
+	font-size: 8rem;
+  font-weight: 300;
+	display: inline-block;
+}
+
+
+#number span {
+	font-size: 1.5rem;
+	display: inline-flex;
+	transform: rotate(-90deg) translate(12px,6px);
+}
+
 
 /* ------ About ------ */
 h3 {
@@ -241,11 +259,6 @@ h3 {
   font-weight: 300;
 }
 
-img {
-/* margin-left: 10%; */
-opacity: 0.9;
-max-width: 100%;
-}
 
 .about {
   margin-bottom: 20%;
@@ -385,25 +398,8 @@ select {
   display: inline-block;
 }
 
-.btn-flat.fancy {
-  display:inline-block;
-  color: #AA9082;
-  padding: 1rem 2rem;
-  text-transform: uppercase;
-  border: 1px solid #AA9082;
-  letter-spacing: 4px;
-  font-size: 0.8rem;
-  width: auto;
-}
-/* Hover Effects */
-.btn-flat:hover {
-  color: #F7F7F7;
-  background-color: #AA9082;
-  text-decoration: none;
-}
 
-
-/* ------ Media queries ------ */
+/* --- Media queries --- */
 
 #size-indicator::after {
   content: 'This is extra-small';
